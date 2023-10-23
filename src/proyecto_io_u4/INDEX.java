@@ -36,6 +36,7 @@ public class INDEX extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("INDEX");
@@ -82,6 +83,9 @@ public class INDEX extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 0, 320, 700));
+
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -158,6 +162,7 @@ public class INDEX extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
