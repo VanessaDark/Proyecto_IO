@@ -87,7 +87,7 @@ public class INDEX extends javax.swing.JFrame {
                 btn_descuentoActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 160, 80));
+        jPanel1.add(btn_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 170, 80));
 
         jButton4.setBackground(new java.awt.Color(153, 255, 102));
         jButton4.setText("ANALISIS ABC");
@@ -97,7 +97,7 @@ public class INDEX extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 160, 80));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 430, 160, 80));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
