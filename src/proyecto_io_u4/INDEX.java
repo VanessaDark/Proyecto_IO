@@ -4,6 +4,8 @@
  */
 package proyecto_io_u4;
 
+import java.awt.Color;
+
 /**
  *
  * @author vanes
@@ -33,7 +35,7 @@ public class INDEX extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_descuento = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -61,6 +63,7 @@ public class INDEX extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 170, 80));
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 51));
         jButton2.setText("CANTIDAD ECONOMICA");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,15 +72,26 @@ public class INDEX extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 290, -1, 80));
 
-        jButton3.setText("DESCUENTOS POR CANTIDAD");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        btn_descuento.setBackground(new java.awt.Color(153, 255, 102));
+        btn_descuento.setText("DESCUENTOS POR CANTIDAD");
+        btn_descuento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_descuentoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_descuentoMouseExited(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 160, 80));
+        btn_descuento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_descuentoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 160, 80));
 
+        jButton4.setBackground(new java.awt.Color(153, 255, 102));
         jButton4.setText("ANALISIS ABC");
+        jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -121,9 +135,12 @@ public class INDEX extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btn_descuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_descuentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        desc_p_cant abrir =  new desc_p_cant();
+        abrir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_descuentoActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -131,6 +148,16 @@ public class INDEX extends javax.swing.JFrame {
         abrir.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void btn_descuentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_descuentoMouseEntered
+        // TODO add your handling code here:
+        btn_descuento.setBackground(new Color(172,235,117));
+    }//GEN-LAST:event_btn_descuentoMouseEntered
+
+    private void btn_descuentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_descuentoMouseExited
+        // TODO add your handling code here:
+        btn_descuento.setBackground(new Color(117,235,121));
+    }//GEN-LAST:event_btn_descuentoMouseExited
 
     /**
      * @param args the command line arguments
@@ -168,9 +195,9 @@ public class INDEX extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_descuento;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
