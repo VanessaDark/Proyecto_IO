@@ -4,6 +4,16 @@
  */
 package proyecto_io_u4;
 
+import java.awt.Color;
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import java.util.ArrayList;
+import java.util.Vector;
+
 /**
  *
  * @author vanes
@@ -28,105 +38,363 @@ public class an_abc extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TX_A = new javax.swing.JTextArea();
+        tabla = new javax.swing.JTable();
         Bbtn_calcular = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        btn_Acolumnas = new javax.swing.JButton();
+        sp_columnas = new javax.swing.JSpinner();
         jButton3 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tablaA = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaB = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        btn_regresar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tablaC = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
+        txt_suma = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        btn_ordenar = new javax.swing.JButton();
+        btn_clas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ANALISIS ABC");
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(200, 228, 178));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("ANÁLISIS ABC");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 45, -1, -1));
-
-        jButton1.setText("REGRESAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "Producto", "Consumo", "Costo", "V.M.A", "% Participacin"
+                "#", "Producto", "Consumo", "Costo", "V.M.A", "% Participacin"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tabla);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, -1, 210));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 520, 440));
 
-        jScrollPane1.setToolTipText("FS");
-
-        TX_A.setColumns(20);
-        TX_A.setRows(5);
-        jScrollPane1.setViewportView(TX_A);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 120, 90, 210));
-
-        Bbtn_calcular.setText("Calcular");
+        Bbtn_calcular.setText("Multiplicar");
+        Bbtn_calcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Bbtn_calcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bbtn_calcularActionPerformed(evt);
             }
         });
-        jPanel1.add(Bbtn_calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, -1, -1));
+        jPanel1.add(Bbtn_calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, -1, 40));
 
-        jLabel2.setText("Cantidad");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Cántidad");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 90, 30));
 
-        jButton2.setText("Agregar");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
-        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 60, -1));
+        btn_Acolumnas.setText("Agregar");
+        btn_Acolumnas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_Acolumnas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AcolumnasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_Acolumnas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 90, 40));
 
-        jButton3.setText("Ordenar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, -1, -1));
+        sp_columnas.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+        jPanel1.add(sp_columnas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 70, 40));
+
+        jButton3.setText("Sumar");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 320, 90, 30));
+
+        tablaA.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Producto", "%"
+            }
+        ));
+        jScrollPane3.setViewportView(tablaA);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 240, 220, 180));
+
+        jLabel3.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("A");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, -1, 40));
+
+        jLabel4.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("B");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 190, -1, 50));
+
+        tablaB.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Producto", "%"
+            }
+        ));
+        jScrollPane1.setViewportView(tablaB);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 240, 220, 180));
+
+        jPanel2.setBackground(new java.awt.Color(126, 170, 146));
+
+        btn_regresar.setBackground(new java.awt.Color(158, 210, 190));
+        btn_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Regresar.png"))); // NOI18N
+        btn_regresar.setBorder(null);
+        btn_regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_regresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_regresarMouseExited(evt);
+            }
+        });
+        btn_regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresarActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 255, 204));
+        jLabel1.setText("ANÁLISIS ABC");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(btn_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(415, 415, 415)
+                .addComponent(jLabel1)
+                .addGap(0, 553, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btn_regresar, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 90));
+
+        jLabel5.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("C");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 450, 40, 40));
+
+        tablaC.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Producto", "%"
+            }
+        ));
+        jScrollPane4.setViewportView(tablaC);
+
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 490, 220, 170));
+
+        jLabel6.setText("Suma");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 360, -1, -1));
+        jPanel1.add(txt_suma, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, 90, 40));
+
+        jLabel7.setText("Consumo * costo");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, -1, -1));
+
+        jLabel8.setText("Sumatoria de V.M.A");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, -1, -1));
+
+        jButton1.setText("% Participacion");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 460, 120, 50));
+
+        btn_ordenar.setText("Ordenar");
+        btn_ordenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ordenarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_ordenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 110, 50));
+
+        btn_clas.setText("Clasificar");
+        btn_clas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_clas, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1036, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 713, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
         // TODO add your handling code here:
         INDEX regresar = new INDEX();
         regresar.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_regresarActionPerformed
 
     private void Bbtn_calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bbtn_calcularActionPerformed
-        // TODO add your handling code here:
-        int suma= 2+2;
+       DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+    int numRows = (int) sp_columnas.getValue(); // Obtener la cantidad de filas desde el JSpinner
+    
+
+    for (int i = 0; i < numRows; i++) {
+        // Supongamos que tienes un JTable con columnas "Cantidad", "Costo" y "V.M.A"
+        int cantidad = Integer.parseInt(model.getValueAt(i, 2).toString()); // Obtener Cantidad de la fila i
+        int costo = Integer.parseInt(model.getValueAt(i, 3).toString()); // Obtener Costo de la fila i
+        int vma = cantidad * costo; // Calcular V.M.A
         
+        // Agregar el resultado a la tabla en la columna "V.M.A"
+        model.setValueAt(vma, i, 4);
+  
+     } //Fin for
+    //Fin multiplicacion---------------------------------------------------------------------
+    
+    //-----------------SUMA----------------------------------
+    
+    int suma = 0;
+    
+    for (int i = 0; i < numRows; i++) {
+        // Supongamos que la columna que deseas sumar es la columna "V.M.A" (índice 2)
+        int valor = Integer.parseInt(model.getValueAt(i, 4).toString());
+        suma += valor;
+    }
+    
+    // Muestra el valor suma en un txt_suma
+    txt_suma.setText(""+suma);
+    
+    //---------------------------------------------------------
+    
+    //------------ %PARTICIPACION -----------------------------
+    
+    /* Sumatoria --- 100%
+       V.M.A     ---   X
+    */
+    
+    for (int i = 0; i < numRows; i++) {
         
+        // Obtener los valores de la Sumatoria y el V.M.A en la fila actual
+        int sumatoria=Integer.parseInt(txt_suma.getText());// Obtiene la sumatoria
+        int vma = (int) model.getValueAt(i, 4); // Supongamos que el V.M.A está en la segunda columna (columna 1)
+
+        // Realizar el cálculo de la regla de tres
+        double resultado = (vma * 100) / sumatoria;
+
+        // Establecer el resultado en la celda correspondiente
+        model.setValueAt(resultado, i, 5); // Colocar el resultado en la segunda columna (columna 1)
+    }
+    
+    
+    
+    
+    
+    //FIN BOTON
     }//GEN-LAST:event_Bbtn_calcularActionPerformed
+
+    private void btn_AcolumnasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AcolumnasActionPerformed
+      // Obtiene el modelo de la tabla actual
+    DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+    
+    // Borra todas las filas existentes
+    model.setRowCount(0);
+
+    // Obtiene el número de filas a agregar del JSpinner
+    int numFilas = (int) sp_columnas.getValue();
+
+    // Agrega las filas al modelo de tabla con un contador
+    for (int i = 1; i <= numFilas; i++) {
+        // Crea una fila con una sola celda que contiene el contador
+        Object[] rowData = {i};
+        model.addRow(rowData);
+    }
+
+    }//GEN-LAST:event_btn_AcolumnasActionPerformed
+
+    private void btn_regresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseEntered
+        // TODO add your handling code here:
+        btn_regresar.setBackground(new Color(158, 178, 210));
+    }//GEN-LAST:event_btn_regresarMouseEntered
+
+    private void btn_regresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseExited
+        // TODO add your handling code here:
+        btn_regresar.setBackground(new Color(158,210,190));
+    }//GEN-LAST:event_btn_regresarMouseExited
+
+    private void btn_ordenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ordenarActionPerformed
+        // TODO add your handling code here:
+        
+       DefaultTableModel originalModel = (DefaultTableModel) tabla.getModel();
+
+    // Crea un TableRowSorter basado en el modelo de la tabla original
+    TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(originalModel);
+    tabla.setRowSorter(sorter);
+
+    // Establece la columna por la cual deseas ordenar (en este caso, columna 5)
+    int columnIndex = 5;  // El índice de la columna 5 es 4 (0-indexed)
+
+    // Establece el orden de clasificación (de mayor a menor)
+    sorter.setComparator(columnIndex, (o1, o2) -> {
+        if (o1 instanceof Comparable && o2 instanceof Comparable) {
+            return ((Comparable) o2).compareTo((Comparable) o1);
+        } else {
+            return 0;
+        }
+    });
+
+    // Realiza la clasificación
+    sorter.toggleSortOrder(columnIndex);
+
+    }//GEN-LAST:event_btn_ordenarActionPerformed
+
+    private void btn_clasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clasActionPerformed
+        // TODO add your handling code here:
+     DefaultTableModel tablaModel = (DefaultTableModel) tabla.getModel();
+    DefaultTableModel tablaAModel = new DefaultTableModel();
+
+    tablaAModel.addColumn("Columna 0");
+    tablaAModel.addColumn("Columna 1");
+
+    int suma = 0;
+    int fila = 0;
+
+    while (fila < tablaModel.getRowCount() && suma + ((Double) tablaModel.getValueAt(fila, 5)).intValue() <= 86) {
+        suma += ((Double) tablaModel.getValueAt(fila, 5)).intValue();
+        tablaAModel.addRow(new Object[]{tablaModel.getValueAt(fila, 1), ((Double) tablaModel.getValueAt(fila, 5)).intValue()});
+        fila++;
+    }
+
+    tabla.setModel(tablaModel);
+    tablaA.setModel(tablaAModel);
+        
+    }//GEN-LAST:event_btn_clasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,16 +433,31 @@ public class an_abc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bbtn_calcular;
-    private javax.swing.JTextArea TX_A;
+    private javax.swing.JButton btn_Acolumnas;
+    private javax.swing.JButton btn_clas;
+    private javax.swing.JButton btn_ordenar;
+    private javax.swing.JButton btn_regresar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSpinner sp_columnas;
+    private javax.swing.JTable tabla;
+    private javax.swing.JTable tablaA;
+    private javax.swing.JTable tablaB;
+    private javax.swing.JTable tablaC;
+    private javax.swing.JTextField txt_suma;
     // End of variables declaration//GEN-END:variables
 }
