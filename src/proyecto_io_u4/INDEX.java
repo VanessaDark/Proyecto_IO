@@ -12,19 +12,19 @@ import java.awt.Color;
  */
 public class INDEX extends javax.swing.JFrame {
 
-    FormatoTiempo tm=new FormatoTiempo();
-    
+    FormatoTiempo tm = new FormatoTiempo();
+
     public INDEX() {
         initComponents();
         this.setExtendedState(this.MAXIMIZED_BOTH);
         mostrarTiempo();
-       
+
     }
-    
-    public void mostrarTiempo(){
-           lb_hora.setText(tm.horaFormateada);
-            lb_fecha.setText(tm.fechaFormateada);
-            
+
+    public void mostrarTiempo() {
+        lb_hora.setText(tm.horaFormateada);
+        lb_fecha.setText(tm.fechaFormateada);
+
     }
 
     /**
@@ -36,10 +36,10 @@ public class INDEX extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_EOQ = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btn_EOQ = new javax.swing.JButton();
         btn_cantidadEC = new javax.swing.JButton();
         btn_descuento = new javax.swing.JButton();
         BTN_ABC = new javax.swing.JButton();
@@ -51,7 +51,31 @@ public class INDEX extends javax.swing.JFrame {
         btn_doc = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        cBoxRe = new javax.swing.JRadioButton();
+        btn_EOQ2 = new javax.swing.JButton();
+
+        btn_EOQ.setBackground(new java.awt.Color(158, 210, 190));
+        btn_EOQ.setFont(new java.awt.Font("Cambria", 0, 17)); // NOI18N
+        btn_EOQ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/produccion3.png"))); // NOI18N
+        btn_EOQ.setText("<html><center>CANTIDAD ECONÓMICA <p> A PRODUCIR <html> ");
+        btn_EOQ.setBorder(null);
+        btn_EOQ.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_EOQ.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_EOQ.setPreferredSize(new java.awt.Dimension(92, 95));
+        btn_EOQ.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btn_EOQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_EOQMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_EOQMouseExited(evt);
+            }
+        });
+        btn_EOQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EOQActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("INDEX");
@@ -67,36 +91,16 @@ public class INDEX extends javax.swing.JFrame {
         jLabel2.setText("MENÚ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
-        btn_EOQ.setBackground(new java.awt.Color(158, 210, 190));
-        btn_EOQ.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        btn_EOQ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/produccion3.png"))); // NOI18N
-        btn_EOQ.setText("CANTIDAD ECONOMICA A PRODUCIR (EOQ)");
-        btn_EOQ.setBorder(null);
-        btn_EOQ.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_EOQ.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_EOQ.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btn_EOQ.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_EOQMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_EOQMouseExited(evt);
-            }
-        });
-        btn_EOQ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_EOQActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_EOQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 370, 170));
-
         btn_cantidadEC.setBackground(new java.awt.Color(158, 210, 190));
-        btn_cantidadEC.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        btn_cantidadEC.setFont(new java.awt.Font("Cambria", 0, 17)); // NOI18N
         btn_cantidadEC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/producto1.png"))); // NOI18N
-        btn_cantidadEC.setText("CANTIDAD ECONOMICA (EOQ)");
+        btn_cantidadEC.setText("<html><center>CANTIDAD ECONÓMICA <p> A ORDENAR <html>");
         btn_cantidadEC.setBorder(null);
         btn_cantidadEC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_cantidadEC.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_cantidadEC.setMaximumSize(new java.awt.Dimension(91, 95));
+        btn_cantidadEC.setMinimumSize(new java.awt.Dimension(91, 95));
+        btn_cantidadEC.setPreferredSize(new java.awt.Dimension(92, 95));
         btn_cantidadEC.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btn_cantidadEC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -111,7 +115,7 @@ public class INDEX extends javax.swing.JFrame {
                 btn_cantidadECActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_cantidadEC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 250, 120));
+        jPanel1.add(btn_cantidadEC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 260, 150));
 
         btn_descuento.setBackground(new java.awt.Color(158, 210, 190));
         btn_descuento.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
@@ -120,6 +124,7 @@ public class INDEX extends javax.swing.JFrame {
         btn_descuento.setBorder(null);
         btn_descuento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_descuento.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_descuento.setPreferredSize(new java.awt.Dimension(92, 95));
         btn_descuento.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btn_descuento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -134,15 +139,18 @@ public class INDEX extends javax.swing.JFrame {
                 btn_descuentoActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 250, 120));
+        jPanel1.add(btn_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 250, 160));
 
         BTN_ABC.setBackground(new java.awt.Color(158, 210, 190));
         BTN_ABC.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         BTN_ABC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/a-b-c-4.png"))); // NOI18N
-        BTN_ABC.setText("ANALISIS ABC");
+        BTN_ABC.setText("ANÁLISIS ABC");
         BTN_ABC.setBorder(null);
         BTN_ABC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_ABC.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BTN_ABC.setMaximumSize(new java.awt.Dimension(91, 95));
+        BTN_ABC.setMinimumSize(new java.awt.Dimension(91, 95));
+        BTN_ABC.setPreferredSize(new java.awt.Dimension(92, 95));
         BTN_ABC.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         BTN_ABC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -157,7 +165,7 @@ public class INDEX extends javax.swing.JFrame {
                 BTN_ABCActionPerformed(evt);
             }
         });
-        jPanel1.add(BTN_ABC, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 490, 250, 120));
+        jPanel1.add(BTN_ABC, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 500, 250, 150));
 
         jPanel2.setBackground(new java.awt.Color(126, 170, 146));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -211,10 +219,34 @@ public class INDEX extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 0, 320, 700));
 
-        jRadioButton1.setBackground(new java.awt.Color(200, 228, 178));
-        jRadioButton1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        jRadioButton1.setText("Punto de reorden");
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, 250, -1));
+        cBoxRe.setBackground(new java.awt.Color(200, 228, 178));
+        cBoxRe.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+        cBoxRe.setText("Punto de reorden");
+        jPanel1.add(cBoxRe, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 250, -1));
+
+        btn_EOQ2.setBackground(new java.awt.Color(158, 210, 190));
+        btn_EOQ2.setFont(new java.awt.Font("Cambria", 0, 17)); // NOI18N
+        btn_EOQ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/produccion3.png"))); // NOI18N
+        btn_EOQ2.setText("<html><center>CANTIDAD ECONÓMICA <p> A PRODUCIR <html> ");
+        btn_EOQ2.setBorder(null);
+        btn_EOQ2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_EOQ2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_EOQ2.setPreferredSize(new java.awt.Dimension(92, 95));
+        btn_EOQ2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btn_EOQ2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_EOQ2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_EOQ2MouseExited(evt);
+            }
+        });
+        btn_EOQ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EOQ2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_EOQ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 260, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -232,22 +264,26 @@ public class INDEX extends javax.swing.JFrame {
 
     private void btn_EOQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EOQActionPerformed
         // TODO add your handling code here:
-        EOQ abrir=new EOQ();
-        abrir.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btn_EOQActionPerformed
 
     private void btn_cantidadECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cantidadECActionPerformed
         // TODO add your handling code here:
-        Cantidad_economica abrir = new Cantidad_economica();
-        abrir.setVisible(true);
-        dispose();
-        
+        if (cBoxRe.isSelected()) {
+            EOQ_Re abrir = new EOQ_Re();
+            abrir.setVisible(true);
+            abrir.setLocationRelativeTo(null);
+
+        } else {
+            EOQ abrir = new EOQ();
+            abrir.setVisible(true);
+            this.setLocationRelativeTo(null);
+        }
     }//GEN-LAST:event_btn_cantidadECActionPerformed
 
     private void btn_descuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_descuentoActionPerformed
         // TODO add your handling code here:
-        desc_p_cant abrir =  new desc_p_cant();
+        desc_p_cant abrir = new desc_p_cant();
         abrir.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_descuentoActionPerformed
@@ -266,12 +302,12 @@ public class INDEX extends javax.swing.JFrame {
 
     private void btn_descuentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_descuentoMouseExited
         // TODO add your handling code here:
-        btn_descuento.setBackground(new Color(158,210,190));
+        btn_descuento.setBackground(new Color(158, 210, 190));
     }//GEN-LAST:event_btn_descuentoMouseExited
 
     private void btn_cantidadECMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cantidadECMouseExited
         // TODO add your handling code here:
-         btn_cantidadEC.setBackground(new Color(158,210,190));
+        btn_cantidadEC.setBackground(new Color(158, 210, 190));
     }//GEN-LAST:event_btn_cantidadECMouseExited
 
     private void btn_cantidadECMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cantidadECMouseEntered
@@ -286,17 +322,17 @@ public class INDEX extends javax.swing.JFrame {
 
     private void btn_EOQMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EOQMouseExited
         // TODO add your handling code here:
-        btn_EOQ.setBackground(new Color(158,210,190));
+        btn_EOQ.setBackground(new Color(158, 210, 190));
     }//GEN-LAST:event_btn_EOQMouseExited
 
     private void BTN_ABCMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ABCMouseEntered
         // TODO add your handling code here:
-         BTN_ABC.setBackground(new Color(158, 178, 210));
+        BTN_ABC.setBackground(new Color(158, 178, 210));
     }//GEN-LAST:event_BTN_ABCMouseEntered
 
     private void BTN_ABCMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ABCMouseExited
         // TODO add your handling code here:
-         BTN_ABC.setBackground(new Color(158,210,190));
+        BTN_ABC.setBackground(new Color(158, 210, 190));
     }//GEN-LAST:event_BTN_ABCMouseExited
 
     private void btn_docMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_docMouseEntered
@@ -306,8 +342,24 @@ public class INDEX extends javax.swing.JFrame {
 
     private void btn_docMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_docMouseExited
         // TODO add your handling code here:
-        btn_doc.setBackground(new Color(158,210,190));
+        btn_doc.setBackground(new Color(158, 210, 190));
     }//GEN-LAST:event_btn_docMouseExited
+
+    private void btn_EOQ2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EOQ2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_EOQ2MouseEntered
+
+    private void btn_EOQ2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EOQ2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_EOQ2MouseExited
+
+    private void btn_EOQ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EOQ2ActionPerformed
+        // TODO add your handling code here:
+        EOP abrir = new EOP();
+        abrir.setVisible(true);
+        abrir.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_btn_EOQ2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,6 +390,7 @@ public class INDEX extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new INDEX().setVisible(true);
             }
@@ -347,9 +400,11 @@ public class INDEX extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTN_ABC;
     private javax.swing.JButton btn_EOQ;
+    private javax.swing.JButton btn_EOQ2;
     private javax.swing.JButton btn_cantidadEC;
     private javax.swing.JButton btn_descuento;
     private javax.swing.JButton btn_doc;
+    private javax.swing.JRadioButton cBoxRe;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -357,7 +412,6 @@ public class INDEX extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lb_fecha;
     private javax.swing.JLabel lb_hora;
