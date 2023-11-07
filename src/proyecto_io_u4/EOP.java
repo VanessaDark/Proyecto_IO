@@ -94,6 +94,7 @@ public class EOP extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(158, 210, 190));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/Regresar.png"))); // NOI18N
+        jButton1.setAutoscrolls(true);
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {

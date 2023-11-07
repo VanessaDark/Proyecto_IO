@@ -5,28 +5,30 @@
 package proyecto_io_u4;
 
 import java.awt.Color;
+import java.awt.Component;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Britany Morales
  */
-public class EOQ_Re extends javax.swing.JFrame {
+public class EOQ_Re2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form EOQ_Re
+     * Creates new form EOQ_Re2
      */
-    public EOQ_Re() {
+    public EOQ_Re2() {
         initComponents();
-        this.setExtendedState(EOQ.MAXIMIZED_BOTH);
-        
+        this.setExtendedState(EOQ_Re2.MAXIMIZED_BOTH);
         txtQ.setEditable(false);
-        txtInvProm.setEditable(false);
-        txtN.setEditable(false);
+        txtIP.setEditable(false);
+        txtPA.setEditable(false);
         txtCCA.setEditable(false);
         txtCOA.setEditable(false);
         txtCMA.setEditable(false);
         txtCT.setEditable(false);
+        txtPR.setEditable(false);
     }
 
     /**
@@ -55,17 +57,21 @@ public class EOQ_Re extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txtCMA = new javax.swing.JTextField();
-        txtN = new javax.swing.JTextField();
+        txtPA = new javax.swing.JTextField();
         txtCOA = new javax.swing.JTextField();
         jSeparator13 = new javax.swing.JSeparator();
         jSeparator14 = new javax.swing.JSeparator();
         jSeparator15 = new javax.swing.JSeparator();
         txtQ = new javax.swing.JTextField();
-        txtInvProm = new javax.swing.JTextField();
+        txtIP = new javax.swing.JTextField();
         txtCCA = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jSeparator18 = new javax.swing.JSeparator();
+        txtPR = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jSeparator19 = new javax.swing.JSeparator();
         txtCT = new javax.swing.JTextField();
+        txtCT2 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -75,8 +81,8 @@ public class EOQ_Re extends javax.swing.JFrame {
         txtCU = new javax.swing.JTextField();
         txtCM = new javax.swing.JTextField();
         txtDAN = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnCalc = new javax.swing.JButton();
+        btnLim = new javax.swing.JButton();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
@@ -194,7 +200,8 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         txtCMA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCMA.setForeground(new java.awt.Color(153, 153, 153));
+        txtCMA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCMA.setForeground(new java.awt.Color(51, 51, 51));
         txtCMA.setText("0");
         txtCMA.setBorder(null);
         txtCMA.addActionListener(new java.awt.event.ActionListener() {
@@ -202,26 +209,43 @@ public class EOQ_Re extends javax.swing.JFrame {
                 txtCMAActionPerformed(evt);
             }
         });
-        jPanel4.add(txtCMA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 110, 21));
-
-        txtN.setBackground(new java.awt.Color(209, 231, 191));
-        txtN.setForeground(new java.awt.Color(153, 153, 153));
-        txtN.setText("0");
-        txtN.setBorder(null);
-        txtN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNActionPerformed(evt);
+        txtCMA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCMAKeyTyped(evt);
             }
         });
-        jPanel4.add(txtN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 120, 21));
+        jPanel4.add(txtCMA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 110, 21));
+
+        txtPA.setBackground(new java.awt.Color(209, 231, 191));
+        txtPA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPA.setForeground(new java.awt.Color(51, 51, 51));
+        txtPA.setText("0");
+        txtPA.setBorder(null);
+        txtPA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPAActionPerformed(evt);
+            }
+        });
+        txtPA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPAKeyTyped(evt);
+            }
+        });
+        jPanel4.add(txtPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 120, 21));
 
         txtCOA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCOA.setForeground(new java.awt.Color(153, 153, 153));
+        txtCOA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCOA.setForeground(new java.awt.Color(51, 51, 51));
         txtCOA.setText("0");
         txtCOA.setBorder(null);
         txtCOA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCOAActionPerformed(evt);
+            }
+        });
+        txtCOA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCOAKeyTyped(evt);
             }
         });
         jPanel4.add(txtCOA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 120, 21));
@@ -236,7 +260,8 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel4.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 110, 10));
 
         txtQ.setBackground(new java.awt.Color(209, 231, 191));
-        txtQ.setForeground(new java.awt.Color(153, 153, 153));
+        txtQ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtQ.setForeground(new java.awt.Color(51, 51, 51));
         txtQ.setText("0");
         txtQ.setBorder(null);
         txtQ.addActionListener(new java.awt.event.ActionListener() {
@@ -251,19 +276,26 @@ public class EOQ_Re extends javax.swing.JFrame {
         });
         jPanel4.add(txtQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 120, 21));
 
-        txtInvProm.setBackground(new java.awt.Color(209, 231, 191));
-        txtInvProm.setForeground(new java.awt.Color(153, 153, 153));
-        txtInvProm.setText("0");
-        txtInvProm.setBorder(null);
-        txtInvProm.addActionListener(new java.awt.event.ActionListener() {
+        txtIP.setBackground(new java.awt.Color(209, 231, 191));
+        txtIP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtIP.setForeground(new java.awt.Color(51, 51, 51));
+        txtIP.setText("0");
+        txtIP.setBorder(null);
+        txtIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInvPromActionPerformed(evt);
+                txtIPActionPerformed(evt);
             }
         });
-        jPanel4.add(txtInvProm, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 110, 21));
+        txtIP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIPKeyTyped(evt);
+            }
+        });
+        jPanel4.add(txtIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 110, 21));
 
         txtCCA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCCA.setForeground(new java.awt.Color(153, 153, 153));
+        txtCCA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCCA.setForeground(new java.awt.Color(51, 51, 51));
         txtCCA.setText("0");
         txtCCA.setBorder(null);
         txtCCA.addActionListener(new java.awt.event.ActionListener() {
@@ -271,18 +303,49 @@ public class EOQ_Re extends javax.swing.JFrame {
                 txtCCAActionPerformed(evt);
             }
         });
+        txtCCA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCCAKeyTyped(evt);
+            }
+        });
         jPanel4.add(txtCCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 110, 21));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(60, 60, 60));
-        jLabel20.setText("Costo total:");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        jLabel20.setText("Punto de reorden:");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         jSeparator18.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, 10));
+        jPanel4.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, 10));
+
+        txtPR.setBackground(new java.awt.Color(209, 231, 191));
+        txtPR.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPR.setForeground(new java.awt.Color(51, 51, 51));
+        txtPR.setText("0");
+        txtPR.setBorder(null);
+        txtPR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPRActionPerformed(evt);
+            }
+        });
+        txtPR.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPRKeyTyped(evt);
+            }
+        });
+        jPanel4.add(txtPR, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 120, 21));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(60, 60, 60));
+        jLabel21.setText("Costo total:");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jSeparator19.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel4.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, 10));
 
         txtCT.setBackground(new java.awt.Color(209, 231, 191));
-        txtCT.setForeground(new java.awt.Color(153, 153, 153));
+        txtCT.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCT.setForeground(new java.awt.Color(51, 51, 51));
         txtCT.setText("0");
         txtCT.setBorder(null);
         txtCT.addActionListener(new java.awt.event.ActionListener() {
@@ -290,7 +353,29 @@ public class EOQ_Re extends javax.swing.JFrame {
                 txtCTActionPerformed(evt);
             }
         });
+        txtCT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCTKeyTyped(evt);
+            }
+        });
         jPanel4.add(txtCT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 120, 21));
+
+        txtCT2.setBackground(new java.awt.Color(209, 231, 191));
+        txtCT2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCT2.setForeground(new java.awt.Color(51, 51, 51));
+        txtCT2.setText("0");
+        txtCT2.setBorder(null);
+        txtCT2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCT2ActionPerformed(evt);
+            }
+        });
+        txtCT2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCT2KeyTyped(evt);
+            }
+        });
+        jPanel4.add(txtCT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 120, 21));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 780, 500));
 
@@ -321,6 +406,7 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         txtDA.setBackground(new java.awt.Color(209, 231, 191));
+        txtDA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtDA.setForeground(new java.awt.Color(153, 153, 153));
         txtDA.setText("D");
         txtDA.setBorder(null);
@@ -342,9 +428,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(txtDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 120, 21));
 
         txtCU.setBackground(new java.awt.Color(209, 231, 191));
+        txtCU.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCU.setForeground(new java.awt.Color(153, 153, 153));
         txtCU.setText("C");
         txtCU.setBorder(null);
+        txtCU.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCUMousePressed(evt);
+            }
+        });
         txtCU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCUActionPerformed(evt);
@@ -358,9 +450,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(txtCU, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 130, 21));
 
         txtCM.setBackground(new java.awt.Color(209, 231, 191));
+        txtCM.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCM.setForeground(new java.awt.Color(153, 153, 153));
         txtCM.setText("H");
         txtCM.setBorder(null);
+        txtCM.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCMMousePressed(evt);
+            }
+        });
         txtCM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCMActionPerformed(evt);
@@ -374,9 +472,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(txtCM, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 130, 21));
 
         txtDAN.setBackground(new java.awt.Color(209, 231, 191));
+        txtDAN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtDAN.setForeground(new java.awt.Color(153, 153, 153));
         txtDAN.setText("0");
         txtDAN.setBorder(null);
+        txtDAN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDANMousePressed(evt);
+            }
+        });
         txtDAN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDANActionPerformed(evt);
@@ -387,19 +491,29 @@ public class EOQ_Re extends javax.swing.JFrame {
                 txtDANKeyTyped(evt);
             }
         });
-        jPanel5.add(txtDAN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 130, 21));
+        jPanel5.add(txtDAN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 21));
 
-        jButton4.setBackground(new java.awt.Color(204, 202, 204));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jButton4.setText("Calcular");
-        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 118, 36));
+        btnCalc.setBackground(new java.awt.Color(204, 204, 255));
+        btnCalc.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnCalc.setForeground(new java.awt.Color(102, 102, 102));
+        btnCalc.setText("Calcular");
+        btnCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnCalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 118, 36));
 
-        jButton5.setBackground(new java.awt.Color(204, 202, 204));
-        jButton5.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jButton5.setText("Limpiar");
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 118, 36));
+        btnLim.setBackground(new java.awt.Color(204, 204, 255));
+        btnLim.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnLim.setForeground(new java.awt.Color(102, 102, 102));
+        btnLim.setText("Limpiar");
+        btnLim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnLim, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 118, 36));
 
         jSeparator8.setForeground(new java.awt.Color(153, 153, 153));
         jPanel5.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 130, 10));
@@ -424,7 +538,7 @@ public class EOQ_Re extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(60, 60, 60));
         jLabel17.setText("Días por año:");
-        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(60, 60, 60));
@@ -434,7 +548,7 @@ public class EOQ_Re extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(60, 60, 60));
         jLabel19.setText("Tiempo de entrega:");
-        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
 
         jSeparator16.setForeground(new java.awt.Color(153, 153, 153));
         jPanel5.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 130, 10));
@@ -443,9 +557,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 130, 10));
 
         txtCO.setBackground(new java.awt.Color(209, 231, 191));
+        txtCO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCO.setForeground(new java.awt.Color(153, 153, 153));
         txtCO.setText("S");
         txtCO.setBorder(null);
+        txtCO.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCOMousePressed(evt);
+            }
+        });
         txtCO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCOActionPerformed(evt);
@@ -459,9 +579,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         jPanel5.add(txtCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 130, 21));
 
         txtTE.setBackground(new java.awt.Color(209, 231, 191));
+        txtTE.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtTE.setForeground(new java.awt.Color(153, 153, 153));
         txtTE.setText("Días");
         txtTE.setBorder(null);
+        txtTE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtTEMousePressed(evt);
+            }
+        });
         txtTE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTEActionPerformed(evt);
@@ -472,12 +598,18 @@ public class EOQ_Re extends javax.swing.JFrame {
                 txtTEKeyTyped(evt);
             }
         });
-        jPanel5.add(txtTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 21));
+        jPanel5.add(txtTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 130, 21));
 
         txtDd.setBackground(new java.awt.Color(209, 231, 191));
+        txtDd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtDd.setForeground(new java.awt.Color(153, 153, 153));
         txtDd.setText("d");
         txtDd.setBorder(null);
+        txtDd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDdMousePressed(evt);
+            }
+        });
         txtDd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDdActionPerformed(evt);
@@ -513,16 +645,15 @@ public class EOQ_Re extends javax.swing.JFrame {
         INDEX regresar = new INDEX();
         regresar.setVisible(true);
         dispose();
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtCMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCMAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCMAActionPerformed
 
-    private void txtNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNActionPerformed
+    private void txtPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNActionPerformed
+    }//GEN-LAST:event_txtPAActionPerformed
 
     private void txtCOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOAActionPerformed
         // TODO add your handling code here:
@@ -532,149 +663,501 @@ public class EOQ_Re extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQActionPerformed
 
-    private void txtInvPromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInvPromActionPerformed
+    private void txtQKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtQKeyTyped
+        // TODO add your handling code here:      
+    }//GEN-LAST:event_txtQKeyTyped
+
+    private void txtIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtInvPromActionPerformed
+    }//GEN-LAST:event_txtIPActionPerformed
 
     private void txtCCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCCAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCCAActionPerformed
 
+    private void txtPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPRActionPerformed
+
+    private void txtDAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDAMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().equals("D")) {
+            txtDA.setText("");
+            txtDA.setForeground(Color.black);
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtDAMousePressed
+
     private void txtDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDAActionPerformed
+
+    private void txtDAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDAKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDAKeyTyped
 
     private void txtCUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCUActionPerformed
 
+    private void txtCUKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCUKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCUKeyTyped
+
     private void txtCMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCMActionPerformed
+
+    private void txtCMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCMKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCMKeyTyped
 
     private void txtDANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDANActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDANActionPerformed
 
+    private void txtDANKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDANKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDANKeyTyped
+
     private void txtCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCOActionPerformed
+
+    private void txtCOKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCOKeyTyped
 
     private void txtTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTEActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTEActionPerformed
 
+    private void txtTEKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTEKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtTEKeyTyped
+
     private void txtDdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDdActionPerformed
+
+    private void txtDdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDdKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDdKeyTyped
+
+    private void txtCUMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCUMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().equals("C")) {
+            txtCU.setText("");
+            txtCU.setForeground(Color.black);
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtCUMousePressed
+
+    private void txtCMMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCMMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().equals("H")) {
+            txtCM.setText("");
+            txtCM.setForeground(Color.black);
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtCMMousePressed
+
+    private void txtCOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCOMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().equals("S")) {
+            txtCO.setText("");
+            txtCO.setForeground(Color.black);
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtCOMousePressed
+
+    private void txtDdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDdMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().equals("d")) {
+            txtDd.setText("");
+            txtDd.setForeground(Color.black);
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtDdMousePressed
+
+    private void txtTEMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTEMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().equals("Días")) {
+            txtTE.setText("");
+            txtTE.setForeground(Color.black);
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtTEMousePressed
+
+    private void txtDANMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDANMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDd.getText().isEmpty()) {
+            txtDd.setText("d");
+            txtDd.setForeground(new Color(153, 153, 153));
+        }
+        if (txtTE.getText().isEmpty()) {
+            txtTE.setText("Días");
+            txtTE.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().equals("0")) {
+            txtDAN.setText("");
+            txtDAN.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_txtDANMousePressed
+
+    private void txtPAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPAKeyTyped
+        // TODO add your handling code here:  
+    }//GEN-LAST:event_txtPAKeyTyped
+
+    private void txtIPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIPKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIPKeyTyped
+
+    private void txtCCAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCCAKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCCAKeyTyped
+
+    private void txtCOAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOAKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCOAKeyTyped
+
+    private void txtCMAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCMAKeyTyped
+        // TODO add your handling code here: 
+    }//GEN-LAST:event_txtCMAKeyTyped
+
+    private void txtPRKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPRKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPRKeyTyped
 
     private void txtCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCTActionPerformed
 
-    private void txtQKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtQKeyTyped
+    private void txtCTKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCTKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQKeyTyped
+    }//GEN-LAST:event_txtCTKeyTyped
 
-    private void txtDAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDAKeyTyped
+    private void txtCT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCT2ActionPerformed
         // TODO add your handling code here:
-          char validar = evt.getKeyChar();
+    }//GEN-LAST:event_txtCT2ActionPerformed
 
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }  
-    }//GEN-LAST:event_txtDAKeyTyped
-
-    private void txtCUKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCUKeyTyped
+    private void txtCT2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCT2KeyTyped
         // TODO add your handling code here:
-          char validar = evt.getKeyChar();
+    }//GEN-LAST:event_txtCT2KeyTyped
 
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }        
-    }//GEN-LAST:event_txtCUKeyTyped
-
-    private void txtCMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCMKeyTyped
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         // TODO add your handling code here:
-          char validar = evt.getKeyChar();
+        //Declarar variables
+        double demAn, costpOrd, costpMan, costUn, deDiaria, tiemEntre, diasxA, cantOp, invProm, numPedAn, costCompAn, costPedAn, costManAn, costTot, ptoRe;
 
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
+        demAn = Double.parseDouble(txtDA.getText());
+        costUn = Double.parseDouble(txtCU.getText());
+        costpMan = Double.parseDouble(txtCM.getText());
+        costpOrd = Double.parseDouble(txtCO.getText());
+        deDiaria = Double.parseDouble(txtDd.getText());
+        tiemEntre = Double.parseDouble(txtTE.getText());
+        diasxA = Double.parseDouble(txtDAN.getText());
 
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }     
-    }//GEN-LAST:event_txtCMKeyTyped
+        //Operaciones
+        cantOp = Math.sqrt((2 * demAn * costpOrd) / costpMan);
+        invProm = cantOp / 2;
+        numPedAn = demAn / cantOp;
+        costCompAn = demAn * costUn;
+        costPedAn = (demAn / cantOp) * costpOrd;
+        costManAn = (cantOp / 2) * costpMan;
+        costTot = costCompAn + costPedAn + costManAn;
 
-    private void txtCOKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOKeyTyped
-        // TODO add your handling code here:
-          char validar = evt.getKeyChar();
-
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }    
-    }//GEN-LAST:event_txtCOKeyTyped
-
-    private void txtDdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDdKeyTyped
-        // TODO add your handling code here:
-          char validar = evt.getKeyChar();
-
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }       
-    }//GEN-LAST:event_txtDdKeyTyped
-
-    private void txtTEKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTEKeyTyped
-        // TODO add your handling code here:
-          char validar = evt.getKeyChar();
-
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }       
-    }//GEN-LAST:event_txtTEKeyTyped
-
-    private void txtDANKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDANKeyTyped
-        // TODO add your handling code here:
-          char validar = evt.getKeyChar();
-
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-
-            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
-        }      
-    }//GEN-LAST:event_txtDANKeyTyped
-
-    private void txtDAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDAMousePressed
-        // TODO add your handling code here:
-        if (txtDA.getText().equals("D")){
-            txtDA.setText("");
-            txtDA.setForeground(Color.black);  
+        if (tiemEntre == 0) {
+            if (numPedAn != 0) {
+                tiemEntre = diasxA / numPedAn;
+            }
         }
-        
-        if ()
-    }//GEN-LAST:event_txtDAMousePressed
 
+        if (deDiaria == 0) {
+            if (diasxA != 0) {
+                deDiaria = demAn / diasxA;
+            }
+        }
+        ptoRe = deDiaria * tiemEntre;
+
+        //Mostrar resultados
+        txtQ.setText(String.format("%.3f", cantOp));
+        txtIP.setText(String.format("%.3f", invProm));
+        txtPA.setText(String.format("%.3f", numPedAn));
+        txtCCA.setText(String.format("%.3f", costCompAn));
+        txtCOA.setText(String.format("%.3f", costPedAn));
+        txtCMA.setText(String.format("%.3f", costManAn));
+        txtCT.setText(String.format("%.3f", costTot));
+        txtPR.setText(String.format("%.3f", ptoRe));
+    }//GEN-LAST:event_btnCalcActionPerformed
+
+    private void btnLimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimActionPerformed
+        // TODO add your handling code here:
+        Limpiar();
+    }//GEN-LAST:event_btnLimActionPerformed
+    private void Limpiar() {
+        for (Component component : jPanel5.getComponents()) {
+            if (component instanceof JTextField) {
+                ((JTextField) component).setText("");
+            }
+        }
+        for (Component component : jPanel4.getComponents()) {
+            if (component instanceof JTextField) {
+                ((JTextField) component).setText("");
+            }
+        }
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(EOQ_Re2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(EOQ_Re2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(EOQ_Re2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(EOQ_Re2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new EOQ_Re2().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalc;
+    private javax.swing.JButton btnLim;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -686,6 +1169,7 @@ public class EOQ_Re extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -705,6 +1189,7 @@ public class EOQ_Re extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator18;
+    private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -717,12 +1202,14 @@ public class EOQ_Re extends javax.swing.JFrame {
     private javax.swing.JTextField txtCO;
     private javax.swing.JTextField txtCOA;
     private javax.swing.JTextField txtCT;
+    private javax.swing.JTextField txtCT2;
     private javax.swing.JTextField txtCU;
     private javax.swing.JTextField txtDA;
     private javax.swing.JTextField txtDAN;
     private javax.swing.JTextField txtDd;
-    private javax.swing.JTextField txtInvProm;
-    private javax.swing.JTextField txtN;
+    private javax.swing.JTextField txtIP;
+    private javax.swing.JTextField txtPA;
+    private javax.swing.JTextField txtPR;
     private javax.swing.JTextField txtQ;
     private javax.swing.JTextField txtTE;
     // End of variables declaration//GEN-END:variables

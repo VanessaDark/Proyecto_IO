@@ -270,14 +270,12 @@ public class INDEX extends javax.swing.JFrame {
     private void btn_cantidadECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cantidadECActionPerformed
         // TODO add your handling code here:
         if (cBoxRe.isSelected()) {
-            EOQ_Re abrir = new EOQ_Re();
+            EOQ_Re2 abrir = new EOQ_Re2();
             abrir.setVisible(true);
-            abrir.setLocationRelativeTo(null);
 
         } else {
             EOQ abrir = new EOQ();
             abrir.setVisible(true);
-            this.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_btn_cantidadECActionPerformed
 
