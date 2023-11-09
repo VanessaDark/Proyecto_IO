@@ -355,7 +355,6 @@ public class INDEX extends javax.swing.JFrame {
         // TODO add your handling code here:
         EOP abrir = new EOP();
         abrir.setVisible(true);
-        abrir.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_btn_EOQ2ActionPerformed
 

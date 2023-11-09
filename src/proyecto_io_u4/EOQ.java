@@ -164,9 +164,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, -1, -1));
 
         txtCT.setBackground(new java.awt.Color(209, 231, 191));
-        txtCT.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCT.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCT.setForeground(new java.awt.Color(51, 51, 51));
-        txtCT.setText("0");
         txtCT.setBorder(null);
         txtCT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,9 +205,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         txtCMA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCMA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCMA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCMA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCMA.setText("0");
         txtCMA.setBorder(null);
         txtCMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,9 +216,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(txtCMA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 110, 21));
 
         txtPA.setBackground(new java.awt.Color(209, 231, 191));
-        txtPA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtPA.setForeground(new java.awt.Color(51, 51, 51));
-        txtPA.setText("0");
         txtPA.setBorder(null);
         txtPA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,9 +227,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(txtPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 120, 21));
 
         txtCOA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCOA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCOA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCOA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCOA.setText("0");
         txtCOA.setBorder(null);
         txtCOA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,9 +247,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 110, 10));
 
         txtQ.setBackground(new java.awt.Color(209, 231, 191));
-        txtQ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtQ.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtQ.setForeground(new java.awt.Color(51, 51, 51));
-        txtQ.setText("0");
         txtQ.setBorder(null);
         txtQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -263,9 +258,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(txtQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 120, 21));
 
         txtIP.setBackground(new java.awt.Color(209, 231, 191));
-        txtIP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtIP.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtIP.setForeground(new java.awt.Color(51, 51, 51));
-        txtIP.setText("0");
         txtIP.setBorder(null);
         txtIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,9 +269,8 @@ public class EOQ extends javax.swing.JFrame {
         jPanel4.add(txtIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 110, 21));
 
         txtCCA.setBackground(new java.awt.Color(209, 231, 191));
-        txtCCA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCCA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCCA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCCA.setText("0");
         txtCCA.setBorder(null);
         txtCCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +313,7 @@ public class EOQ extends javax.swing.JFrame {
         jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 182, -1, -1));
 
         txtDA.setBackground(new java.awt.Color(209, 231, 191));
-        txtDA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtDA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtDA.setForeground(new java.awt.Color(153, 153, 153));
         txtDA.setText("D");
         txtDA.setBorder(null);
@@ -342,7 +335,7 @@ public class EOQ extends javax.swing.JFrame {
         jPanel5.add(txtDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 110, 120, 21));
 
         txtCU.setBackground(new java.awt.Color(209, 231, 191));
-        txtCU.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCU.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCU.setForeground(new java.awt.Color(153, 153, 153));
         txtCU.setText("C");
         txtCU.setBorder(null);
@@ -364,6 +357,7 @@ public class EOQ extends javax.swing.JFrame {
         jPanel5.add(txtCU, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 130, 21));
 
         txtCM.setBackground(new java.awt.Color(209, 231, 191));
+        txtCM.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCM.setForeground(new java.awt.Color(153, 153, 153));
         txtCM.setText("H");
         txtCM.setBorder(null);
@@ -385,7 +379,7 @@ public class EOQ extends javax.swing.JFrame {
         jPanel5.add(txtCM, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 250, 130, 21));
 
         txtCO.setBackground(new java.awt.Color(209, 231, 191));
-        txtCO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCO.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtCO.setForeground(new java.awt.Color(153, 153, 153));
         txtCO.setText("S");
         txtCO.setBorder(null);
@@ -667,13 +661,13 @@ public class EOQ extends javax.swing.JFrame {
         costTot = costCompAn + costPedAn + costManAn;
         
         //Mostrar resultados
-        txtQ.setText(String.format("%.3f", cantOp));
-        txtIP.setText(String.format("%.3f", invProm));
-        txtPA.setText(String.format("%.3f", numPedAn));
-        txtCCA.setText(String.format("%.3f",costCompAn));
-        txtCOA.setText(String.format("%.3f", costPedAn));
-        txtCMA.setText(String.format("%.3f", costManAn));
-        txtCT.setText(String.format("%.3f", costTot));
+        txtQ.setText(String.format("%.2f", cantOp));
+        txtIP.setText(String.format("%.2f", invProm));
+        txtPA.setText(String.format("%.2f", numPedAn));
+        txtCCA.setText(String.format("%.2f",costCompAn));
+        txtCOA.setText(String.format("%.2f", costPedAn));
+        txtCMA.setText(String.format("%.2f", costManAn));
+        txtCT.setText(String.format("%.2f", costTot));
     }//GEN-LAST:event_btnCalActionPerformed
 
     private void btnLimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimActionPerformed

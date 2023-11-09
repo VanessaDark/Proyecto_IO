@@ -4,6 +4,11 @@
  */
 package proyecto_io_u4;
 
+import java.awt.Color;
+import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Britany Morales
@@ -16,6 +21,13 @@ public class EOP extends javax.swing.JFrame {
     public EOP() {
         initComponents();
         this.setExtendedState(EOQ.MAXIMIZED_BOTH);
+        txtQP.setEditable(false);
+        txtIM.setEditable(false);
+        txtIP.setEditable(false);
+        txtPA.setEditable(false);
+        txtCCA.setEditable(false);
+        txtCOA.setEditable(false);
+        txtCT.setEditable(false);
     }
 
     /**
@@ -37,38 +49,37 @@ public class EOP extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jSeparator6 = new javax.swing.JSeparator();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jSeparator13 = new javax.swing.JSeparator();
+        txtCOA = new javax.swing.JTextField();
+        txtIP = new javax.swing.JTextField();
+        txtCCA = new javax.swing.JTextField();
         jSeparator14 = new javax.swing.JSeparator();
         jSeparator15 = new javax.swing.JSeparator();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        txtQP = new javax.swing.JTextField();
+        txtIM = new javax.swing.JTextField();
+        txtPA = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jSeparator18 = new javax.swing.JSeparator();
-        jTextField2 = new javax.swing.JTextField();
+        txtCT = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator19 = new javax.swing.JSeparator();
+        txtCMA = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        txtDA = new javax.swing.JTextField();
+        txtCU = new javax.swing.JTextField();
+        txtCM = new javax.swing.JTextField();
+        txtDAN = new javax.swing.JTextField();
+        btnCal = new javax.swing.JButton();
+        btnLim = new javax.swing.JButton();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
@@ -80,9 +91,9 @@ public class EOP extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jSeparator16 = new javax.swing.JSeparator();
         jSeparator17 = new javax.swing.JSeparator();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
+        txtCO = new javax.swing.JTextField();
+        txtPD = new javax.swing.JTextField();
+        txtDD = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -143,160 +154,157 @@ public class EOP extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(60, 60, 60));
-        jLabel3.setText("Cantidad óptima:");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        jLabel3.setText("<html>Cantidad <p> óptima a producir:<html>");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(60, 60, 60));
         jLabel4.setText("Costo de mantenimiento anual:");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, -1, -1));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(60, 60, 60));
-        jLabel5.setText("Pedidos anuales:");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jLabel5.setText("Producciones anuales:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(60, 60, 60));
         jLabel6.setText("Inventario promedio:");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, -1, -1));
-
-        jTextField1.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField1.setText("0");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 120, 21));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jSeparator2.setForeground(new java.awt.Color(153, 153, 153));
         jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 110, 10));
 
         jSeparator3.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 110, 10));
+        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 120, 10));
 
         jSeparator4.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 120, 10));
+        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 120, 10));
 
         jSeparator5.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 120, 10));
-
-        jSeparator6.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, 10));
+        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 120, 10));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(60, 60, 60));
         jLabel13.setText("Costo de compra anual:");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(60, 60, 60));
-        jLabel14.setText("Punto de reorden:");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(60, 60, 60));
         jLabel16.setText("Costo de orden anual:");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField4.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField4.setText("0");
-        jTextField4.setBorder(null);
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtCOA.setBackground(new java.awt.Color(209, 231, 191));
+        txtCOA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtCOA.setForeground(new java.awt.Color(51, 51, 51));
+        txtCOA.setBorder(null);
+        txtCOA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtCOAActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 110, 21));
+        jPanel4.add(txtCOA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 110, 21));
 
-        jTextField9.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField9.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField9.setText("0");
-        jTextField9.setBorder(null);
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        txtIP.setBackground(new java.awt.Color(209, 231, 191));
+        txtIP.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtIP.setForeground(new java.awt.Color(51, 51, 51));
+        txtIP.setBorder(null);
+        txtIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                txtIPActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 120, 21));
+        jPanel4.add(txtIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 120, 21));
 
-        jTextField10.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField10.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField10.setText("0");
-        jTextField10.setBorder(null);
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        txtCCA.setBackground(new java.awt.Color(209, 231, 191));
+        txtCCA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtCCA.setForeground(new java.awt.Color(51, 51, 51));
+        txtCCA.setBorder(null);
+        txtCCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                txtCCAActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 120, 21));
-
-        jSeparator13.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 110, 10));
+        jPanel4.add(txtCCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 120, 21));
 
         jSeparator14.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 110, 10));
+        jPanel4.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 110, 10));
 
         jSeparator15.setForeground(new java.awt.Color(153, 153, 153));
         jPanel4.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 110, 10));
 
-        jTextField11.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField11.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField11.setText("0");
-        jTextField11.setBorder(null);
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        txtQP.setBackground(new java.awt.Color(209, 231, 191));
+        txtQP.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtQP.setForeground(new java.awt.Color(51, 51, 51));
+        txtQP.setBorder(null);
+        txtQP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                txtQPActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 120, 21));
+        jPanel4.add(txtQP, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 120, 21));
 
-        jTextField12.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField12.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField12.setText("0");
-        jTextField12.setBorder(null);
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        txtIM.setBackground(new java.awt.Color(209, 231, 191));
+        txtIM.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtIM.setForeground(new java.awt.Color(51, 51, 51));
+        txtIM.setBorder(null);
+        txtIM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                txtIMActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 110, 21));
+        jPanel4.add(txtIM, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 110, 21));
 
-        jTextField13.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField13.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField13.setText("0");
-        jTextField13.setBorder(null);
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        txtPA.setBackground(new java.awt.Color(209, 231, 191));
+        txtPA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtPA.setForeground(new java.awt.Color(51, 51, 51));
+        txtPA.setBorder(null);
+        txtPA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                txtPAActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 110, 21));
+        jPanel4.add(txtPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 110, 21));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(60, 60, 60));
         jLabel20.setText("Costo total:");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
 
         jSeparator18.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, 10));
+        jPanel4.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 120, 10));
 
-        jTextField2.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setText("0");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtCT.setBackground(new java.awt.Color(209, 231, 191));
+        txtCT.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtCT.setForeground(new java.awt.Color(51, 51, 51));
+        txtCT.setBorder(null);
+        txtCT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtCTActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 120, 21));
+        jPanel4.add(txtCT, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 120, 21));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 780, 500));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(60, 60, 60));
+        jLabel8.setText("Inventario máximo:");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
+
+        jSeparator19.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel4.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 120, 10));
+
+        txtCMA.setBackground(new java.awt.Color(209, 231, 191));
+        txtCMA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txtCMA.setForeground(new java.awt.Color(51, 51, 51));
+        txtCMA.setBorder(null);
+        txtCMA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCMAActionPerformed(evt);
+            }
+        });
+        jPanel4.add(txtCMA, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 120, 21));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 780, 500));
 
         jPanel5.setBackground(new java.awt.Color(209, 231, 191));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -322,63 +330,113 @@ public class EOP extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(60, 60, 60));
         jLabel12.setText("Costo unitario:");
-        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
 
-        jTextField5.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField5.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField5.setText("D");
-        jTextField5.setBorder(null);
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+        txtDA.setBackground(new java.awt.Color(209, 231, 191));
+        txtDA.setForeground(new java.awt.Color(153, 153, 153));
+        txtDA.setText("D");
+        txtDA.setBorder(null);
+        txtDA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDAMousePressed(evt);
             }
         });
-        jPanel5.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 120, 21));
-
-        jTextField6.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField6.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField6.setText("C");
-        jTextField6.setBorder(null);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtDA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtDAActionPerformed(evt);
             }
         });
-        jPanel5.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 130, 21));
-
-        jTextField7.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField7.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField7.setText("H");
-        jTextField7.setBorder(null);
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+        txtDA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDAKeyTyped(evt);
             }
         });
-        jPanel5.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 130, 21));
+        jPanel5.add(txtDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 120, 21));
 
-        jTextField8.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField8.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField8.setText("0");
-        jTextField8.setBorder(null);
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+        txtCU.setBackground(new java.awt.Color(209, 231, 191));
+        txtCU.setForeground(new java.awt.Color(153, 153, 153));
+        txtCU.setText("C");
+        txtCU.setBorder(null);
+        txtCU.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCUMousePressed(evt);
             }
         });
-        jPanel5.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 130, 21));
+        txtCU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCUActionPerformed(evt);
+            }
+        });
+        txtCU.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCUKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtCU, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 130, 21));
 
-        jButton4.setBackground(new java.awt.Color(204, 202, 204));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jButton4.setText("Calcular");
-        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 118, 36));
+        txtCM.setBackground(new java.awt.Color(209, 231, 191));
+        txtCM.setForeground(new java.awt.Color(153, 153, 153));
+        txtCM.setText("H");
+        txtCM.setBorder(null);
+        txtCM.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCMMousePressed(evt);
+            }
+        });
+        txtCM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCMActionPerformed(evt);
+            }
+        });
+        txtCM.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCMKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtCM, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 130, 21));
 
-        jButton5.setBackground(new java.awt.Color(204, 202, 204));
-        jButton5.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jButton5.setText("Limpiar");
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 118, 36));
+        txtDAN.setBackground(new java.awt.Color(209, 231, 191));
+        txtDAN.setForeground(new java.awt.Color(153, 153, 153));
+        txtDAN.setText("0");
+        txtDAN.setBorder(null);
+        txtDAN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDANMousePressed(evt);
+            }
+        });
+        txtDAN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDANActionPerformed(evt);
+            }
+        });
+        txtDAN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDANKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtDAN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 130, 21));
+
+        btnCal.setBackground(new java.awt.Color(204, 204, 255));
+        btnCal.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnCal.setForeground(new java.awt.Color(102, 102, 102));
+        btnCal.setText("Calcular");
+        btnCal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnCal, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 118, 36));
+
+        btnLim.setBackground(new java.awt.Color(204, 204, 255));
+        btnLim.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnLim.setForeground(new java.awt.Color(102, 102, 102));
+        btnLim.setText("Limpiar");
+        btnLim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnLim, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 118, 36));
 
         jSeparator8.setForeground(new java.awt.Color(153, 153, 153));
         jPanel5.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 130, 10));
@@ -398,22 +456,22 @@ public class EOP extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(60, 60, 60));
         jLabel15.setText("Costo por ordenar:");
-        jPanel5.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        jPanel5.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(60, 60, 60));
         jLabel17.setText("Días por año:");
-        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(60, 60, 60));
         jLabel18.setText("Demanda diaria:");
-        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(60, 60, 60));
         jLabel19.setText("Producción diaria:");
-        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         jSeparator16.setForeground(new java.awt.Color(153, 153, 153));
         jPanel5.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 130, 10));
@@ -421,38 +479,68 @@ public class EOP extends javax.swing.JFrame {
         jSeparator17.setForeground(new java.awt.Color(153, 153, 153));
         jPanel5.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 130, 10));
 
-        jTextField14.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField14.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField14.setText("S");
-        jTextField14.setBorder(null);
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+        txtCO.setBackground(new java.awt.Color(209, 231, 191));
+        txtCO.setForeground(new java.awt.Color(153, 153, 153));
+        txtCO.setText("S");
+        txtCO.setBorder(null);
+        txtCO.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCOMousePressed(evt);
             }
         });
-        jPanel5.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 130, 21));
+        txtCO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCOActionPerformed(evt);
+            }
+        });
+        txtCO.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCOKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 130, 21));
 
-        jTextField16.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField16.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField16.setText("p");
-        jTextField16.setBorder(null);
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+        txtPD.setBackground(new java.awt.Color(209, 231, 191));
+        txtPD.setForeground(new java.awt.Color(153, 153, 153));
+        txtPD.setText("p");
+        txtPD.setBorder(null);
+        txtPD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtPDMousePressed(evt);
             }
         });
-        jPanel5.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 21));
+        txtPD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPDActionPerformed(evt);
+            }
+        });
+        txtPD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPDKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtPD, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 130, 21));
 
-        jTextField17.setBackground(new java.awt.Color(209, 231, 191));
-        jTextField17.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField17.setText("d");
-        jTextField17.setBorder(null);
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+        txtDD.setBackground(new java.awt.Color(209, 231, 191));
+        txtDD.setForeground(new java.awt.Color(153, 153, 153));
+        txtDD.setText("d");
+        txtDD.setBorder(null);
+        txtDD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtDDMousePressed(evt);
             }
         });
-        jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 130, 21));
+        txtDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDDActionPerformed(evt);
+            }
+        });
+        txtDD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDDKeyTyped(evt);
+            }
+        });
+        jPanel5.add(txtDD, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 21));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 380, 500));
 
@@ -479,65 +567,431 @@ public class EOP extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtCOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtCOAActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtIPActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void txtCCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCCAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_txtCCAActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void txtQPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_txtQPActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void txtIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_txtIMActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void txtPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_txtPAActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void txtCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_txtCTActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtDAActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtCUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCUActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtCUActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtCMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtCMActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtDANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDANActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtDANActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void txtCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_txtCOActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void txtPDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_txtPDActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void txtDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_txtDDActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void txtDAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDAMousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+        if (txtDA.getText().equals("D")) {
+            txtDA.setText("");
+            txtDA.setForeground(Color.black);
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtDAMousePressed
+
+    private void txtCOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCOMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().equals("S")) {
+            txtCO.setText("");
+            txtCO.setForeground(Color.black);
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtCOMousePressed
+
+    private void txtCMMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCMMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().equals("H")) {
+            txtCM.setText("");
+            txtCM.setForeground(Color.black);
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtCMMousePressed
+
+    private void txtPDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPDMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().equals("p")) {
+            txtPD.setText("");
+            txtPD.setForeground(Color.black);
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_txtPDMousePressed
+
+    private void txtDANMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDANMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().equals("0")) {
+            txtDAN.setText("");
+            txtDAN.setForeground(Color.black);
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+
+    }//GEN-LAST:event_txtDANMousePressed
+
+    private void txtDDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDDMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().equals("d")) {
+            txtDD.setText("");
+            txtDD.setForeground(Color.black);
+        }
+        if (txtCU.getText().isEmpty()) {
+            txtCU.setText("C");
+            txtCU.setForeground(new Color(153, 153, 153));
+        }
+
+    }//GEN-LAST:event_txtDDMousePressed
+
+    private void txtCUMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCUMousePressed
+        // TODO add your handling code here:
+        if (txtDA.getText().isEmpty()) {
+            txtDA.setText("D");
+            txtDA.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCO.getText().isEmpty()) {
+            txtCO.setText("S");
+            txtCO.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCM.getText().isEmpty()) {
+            txtCM.setText("H");
+            txtCM.setForeground(new Color(153, 153, 153));
+        }
+        if (txtPD.getText().isEmpty()) {
+            txtPD.setText("p");
+            txtPD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDAN.getText().isEmpty()) {
+            txtDAN.setText("0");
+            txtDAN.setForeground(new Color(153, 153, 153));
+        }
+        if (txtDD.getText().isEmpty()) {
+            txtDD.setText("d");
+            txtDD.setForeground(new Color(153, 153, 153));
+        }
+        if (txtCU.getText().equals("C")) {
+            txtCU.setText("");
+            txtCU.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_txtCUMousePressed
+
+    private void btnCalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalActionPerformed
+        // TODO add your handling code here:
+        //Declarar variables
+        double demAn, costpOrd, costpMan, produDi, diasxA, costUn, deDiaria, cantOp, invMax, invProm, numProAn, costCompAn, costPedAn, costManAn, costTot;
+
+        demAn = Double.parseDouble(txtDA.getText());
+        costpOrd = Double.parseDouble(txtCO.getText());
+        costpMan = Double.parseDouble(txtCM.getText());
+        produDi = Double.parseDouble(txtPD.getText());
+        diasxA = Double.parseDouble(txtDAN.getText());
+        deDiaria = Double.parseDouble(txtDD.getText());
+        costUn = Double.parseDouble(txtCU.getText());
+
+        //Operaciones
+        if (deDiaria == 0 && diasxA != 0) {
+            deDiaria = demAn / diasxA;
+        }
+
+        cantOp = Math.sqrt((2 * demAn * costpOrd) / (costpMan * (1 - (deDiaria / produDi))));
+        invMax = (cantOp * (1 - (deDiaria / produDi)));
+        invProm = (cantOp * (1 - (deDiaria / produDi))) / 2;
+        numProAn = demAn / cantOp;
+        costCompAn = demAn * costUn;
+        costPedAn = (demAn / cantOp) * costpOrd;
+        costManAn = (cantOp / 2) * (costpMan * (1 - (deDiaria / produDi)));
+        costTot = costCompAn + costPedAn + costManAn;
+
+        //Mostrar resultados
+        txtQP.setText(String.format("%.2f", cantOp));
+        txtIM.setText(String.format("%.2f", invMax));
+        txtIP.setText(String.format("%.2f", invProm));
+        txtPA.setText(String.format("%.2f", numProAn));
+        txtCCA.setText(String.format("%.2f", costCompAn));
+        txtCOA.setText(String.format("%.2f", costPedAn));
+        txtCMA.setText(String.format("%.2f", costManAn));
+        txtCT.setText(String.format("%.2f", costTot));
+    }//GEN-LAST:event_btnCalActionPerformed
+
+    private void txtCMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCMAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCMAActionPerformed
+
+    private void btnLimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimActionPerformed
+        // TODO add your handling code here:
+        Limpiar();
+    }//GEN-LAST:event_btnLimActionPerformed
+
+    private void txtDAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDAKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDAKeyTyped
+
+    private void txtCOKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCOKeyTyped
+
+    private void txtCMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCMKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCMKeyTyped
+
+    private void txtPDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPDKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtPDKeyTyped
+
+    private void txtDANKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDANKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDANKeyTyped
+
+    private void txtDDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDDKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtDDKeyTyped
+
+    private void txtCUKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCUKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+
+            JOptionPane.showMessageDialog(rootPane, "Solo ingresar números");
+        }
+    }//GEN-LAST:event_txtCUKeyTyped
+
+    private void Limpiar() {
+        for (Component component : jPanel5.getComponents()) {
+            if (component instanceof JTextField jTextField) {
+                jTextField.setText("");
+            }
+        }
+        for (Component component : jPanel4.getComponents()) {
+            if (component instanceof JTextField jTextField) {
+                jTextField.setText("");
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -555,35 +1009,28 @@ public class EOP extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EOP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EOP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EOP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EOP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new EOP().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new EOP().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCal;
+    private javax.swing.JButton btnLim;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -595,6 +1042,7 @@ public class EOP extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -603,33 +1051,33 @@ public class EOP extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator18;
+    private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtCCA;
+    private javax.swing.JTextField txtCM;
+    private javax.swing.JTextField txtCMA;
+    private javax.swing.JTextField txtCO;
+    private javax.swing.JTextField txtCOA;
+    private javax.swing.JTextField txtCT;
+    private javax.swing.JTextField txtCU;
+    private javax.swing.JTextField txtDA;
+    private javax.swing.JTextField txtDAN;
+    private javax.swing.JTextField txtDD;
+    private javax.swing.JTextField txtIM;
+    private javax.swing.JTextField txtIP;
+    private javax.swing.JTextField txtPA;
+    private javax.swing.JTextField txtPD;
+    private javax.swing.JTextField txtQP;
     // End of variables declaration//GEN-END:variables
+
 }

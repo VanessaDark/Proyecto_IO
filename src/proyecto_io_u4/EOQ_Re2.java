@@ -202,7 +202,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtCMA.setBackground(new java.awt.Color(209, 231, 191));
         txtCMA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCMA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCMA.setText("0");
         txtCMA.setBorder(null);
         txtCMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +218,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtPA.setBackground(new java.awt.Color(209, 231, 191));
         txtPA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtPA.setForeground(new java.awt.Color(51, 51, 51));
-        txtPA.setText("0");
         txtPA.setBorder(null);
         txtPA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,7 +234,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtCOA.setBackground(new java.awt.Color(209, 231, 191));
         txtCOA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCOA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCOA.setText("0");
         txtCOA.setBorder(null);
         txtCOA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,7 +259,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtQ.setBackground(new java.awt.Color(209, 231, 191));
         txtQ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtQ.setForeground(new java.awt.Color(51, 51, 51));
-        txtQ.setText("0");
         txtQ.setBorder(null);
         txtQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,7 +275,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtIP.setBackground(new java.awt.Color(209, 231, 191));
         txtIP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtIP.setForeground(new java.awt.Color(51, 51, 51));
-        txtIP.setText("0");
         txtIP.setBorder(null);
         txtIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,7 +291,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtCCA.setBackground(new java.awt.Color(209, 231, 191));
         txtCCA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCCA.setForeground(new java.awt.Color(51, 51, 51));
-        txtCCA.setText("0");
         txtCCA.setBorder(null);
         txtCCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,7 +315,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtPR.setBackground(new java.awt.Color(209, 231, 191));
         txtPR.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtPR.setForeground(new java.awt.Color(51, 51, 51));
-        txtPR.setText("0");
         txtPR.setBorder(null);
         txtPR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -346,7 +339,6 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         txtCT.setBackground(new java.awt.Color(209, 231, 191));
         txtCT.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtCT.setForeground(new java.awt.Color(51, 51, 51));
-        txtCT.setText("0");
         txtCT.setBorder(null);
         txtCT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1091,14 +1083,14 @@ public class EOQ_Re2 extends javax.swing.JFrame {
         ptoRe = deDiaria * tiemEntre;
 
         //Mostrar resultados
-        txtQ.setText(String.format("%.3f", cantOp));
-        txtIP.setText(String.format("%.3f", invProm));
-        txtPA.setText(String.format("%.3f", numPedAn));
-        txtCCA.setText(String.format("%.3f", costCompAn));
-        txtCOA.setText(String.format("%.3f", costPedAn));
-        txtCMA.setText(String.format("%.3f", costManAn));
-        txtCT.setText(String.format("%.3f", costTot));
-        txtPR.setText(String.format("%.3f", ptoRe));
+        txtQ.setText(String.format("%.2f", cantOp));
+        txtIP.setText(String.format("%.2f", invProm));
+        txtPA.setText(String.format("%.2f", numPedAn));
+        txtCCA.setText(String.format("%.2f", costCompAn));
+        txtCOA.setText(String.format("%.2f", costPedAn));
+        txtCMA.setText(String.format("%.2f", costManAn));
+        txtCT.setText(String.format("%.2f", costTot));
+        txtPR.setText(String.format("%.2f", ptoRe));
     }//GEN-LAST:event_btnCalcActionPerformed
 
     private void btnLimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimActionPerformed
